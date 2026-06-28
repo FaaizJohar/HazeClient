@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/FaaizJohar/HazeClient/releases">
-    <img src="https://img.shields.io/github/v/release/FaaizJohar/HazeClient?style=for-the-badge&label=Latest%20Release&color=6b32ec" alt="Latest Release">
+  <a href="https://github.com/FaaizJohar/HazeClient">
+    <img src="https://img.shields.io/badge/Version-0.59.1-6b32ec?style=for-the-badge" alt="Version">
   </a>
   <a href="https://github.com/FaaizJohar/HazeClient/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/FaaizJohar/HazeClient?style=for-the-badge&color=8b5cf6" alt="License">
@@ -17,8 +17,8 @@
   <a href="https://github.com/FaaizJohar/HazeClient/issues">
     <img src="https://img.shields.io/github/issues/FaaizJohar/HazeClient?style=for-the-badge&color=4d23a9" alt="Issues">
   </a>
-  <a href="https://github.com/FaaizJohar/HazeClient/stargazers">
-    <img src="https://img.shields.io/github/stars/FaaizJohar/HazeClient?style=for-the-badge&color=6b32ec" alt="Stars">
+  <a href="https://github.com/FaaizJohar/HazeClient">
+    <img src="https://img.shields.io/badge/Platform-Windows-6b32ec?style=for-the-badge&logo=windows" alt="Platform">
   </a>
 </p>
 
