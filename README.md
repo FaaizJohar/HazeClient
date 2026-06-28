@@ -111,9 +111,12 @@ Your compiled installer will be available in `haze-electron-app/build/output/`.
 
 We welcome contributions! Whether you want to add new in-game modules, improve the launcher UI, or optimize the Java framework, feel free to open a Pull Request. Please read our `CONTRIBUTING.md` before submitting.
 
-## 📄 License
+## 📄 License & Credits
 
 Haze Client is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
+
+> [!IMPORTANT]  
+> **Copyright & Credits:** If you use, fork, or copy significant portions of Haze Client's source code for your own projects, you **must** provide clear and visible credit back to this repository and its creator, **FaaizJohar**. Please do not claim this work as your own.
 
 ---
 <p align="center">
