@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.cavrix.hazecore'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // ASM for byte code manipulation (essential for Java Agents injecting into Minecraft)
+    implementation 'org.ow2.asm:asm:9.5'
+    implementation 'org.ow2.asm:asm-tree:9.5'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Premain-Class': 'com.cavrix.hazecore.HazeCoreAgent',
+            'Agent-Class': 'com.cavrix.hazecore.HazeCoreAgent',
+            'Can-Redefine-Classes': 'true',
+            'Can-Retransform-Classes': 'true'
+        )
+    }
+    
+    // Fat jar to include ASM
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.hazeclient.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "MouseClickMixin",
+    "TitleScreenMixin",
+    "LevelLoadingScreenMixin",
+    "PlayerEntityRendererMixin",
+    "GameRendererMixin",
+    "MouseMixin",
+    "CameraMixin",
+    "WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

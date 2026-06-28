@@ -1,0 +1,61 @@
+{
+    "version": "0.59.1",
+    "private": true,
+    "license": "MIT",
+    "packageManager": "pnpm@10.33.3",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "compile": "pnpm -r compile",
+        "test": "vitest",
+        "build:schema": "pnpm run --prefix=haze-runtime-api build:schema",
+        "build": "pnpm run --prefix=haze-electron-app build",
+        "build:all": "pnpm run --prefix=haze-electron-app build:all",
+        "build:renderer": "pnpm --prefix=haze-ui build",
+        "build:docs": "tsx scripts/docs.ts",
+        "postsign": "pnpm run --prefix=haze-electron-app postsign",
+        "check": "pnpm run --prefix=haze-runtime-api check && pnpm run --prefix=haze-runtime check && pnpm run --prefix=haze-electron-app check && pnpm run --prefix=haze-ui check",
+        "dev:main": "pnpm run --prefix=haze-electron-app dev",
+        "dev:renderer": "pnpm run --prefix=haze-ui dev",
+        "lint": "oxlint -c ./.oxlintrc.json packages && pnpm run --prefix=haze-ui lint && pnpm run --prefix=haze-runtime lint && pnpm run --prefix=haze-runtime-api lint && pnpm run --prefix=haze-electron-app lint",
+        "lint:fix": "oxlint -c ./.oxlintrc.json packages --fix && pnpm run --prefix=haze-runtime-api lint:fix && pnpm run --prefix=haze-runtime lint:fix && pnpm run --prefix=haze-electron-app lint:fix && pnpm run --prefix=haze-ui lint:fix",
+        "format": "oxfmt -c ./.oxfmtrc.json packages --write",
+        "coverage": "vitest run --coverage",
+        "test:e2e": "pnpm --prefix=e2e test",
+        "test:e2e:smoke": "pnpm --prefix=e2e test:smoke",
+        "test:e2e:ui": "pnpm --prefix=e2e test:ui",
+        "test:e2e:scratch": "pnpm --prefix=e2e test:scratch",
+        "e2e:install": "pnpm --dir=e2e install --ignore-workspace",
+        "build:tutorial": "pnpm --prefix=e2e tutorial",
+        "gen:testids": "tsx scripts/gen-testids.ts"
+    },
+    "devDependencies": {
+        "@intlify/core-base": "^11.4.6",
+        "@intlify/message-compiler": "^11.4.6",
+        "@types/js-yaml": "^4.0.9",
+        "@types/node": "^20.19.0",
+        "@vitest/coverage-v8": "^4.1.0",
+        "js-yaml": "^5.1.0",
+        "oxfmt": "^0.48.0",
+        "oxlint": "^1.63.0",
+        "tsx": "^4.21.0",
+        "typedoc": "^0.28.15",
+        "typescript": "^5.9.3",
+        "vitest": "^4.1.0"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "cpu-features",
+            "electron",
+            "esbuild",
+            "node-datachannel",
+            "ssh2",
+            "vue-demi"
+        ],
+        "overrides": {
+            "postcss": ">=8.5.10",
+            "rolldown": "1.0.1"
+        }
+    }
+}

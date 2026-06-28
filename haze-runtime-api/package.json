@@ -1,0 +1,56 @@
+{
+    "name": "@haze/runtime-api",
+    "version": "0.41.0",
+    "author": "ci010 <cijhn@hotmail.com>",
+    "description": "Shared API for between launcher renderer & main process",
+    "license": "MIT",
+    "main": "index.ts",
+    "type": "module",
+    "engines": {
+        "node": ">=20"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hazeclient/haze-launcher"
+    },
+    "scripts": {
+        "build": "pnpm run build:cjs && pnpm run build:esm && pnpm run build:type",
+        "build:cjs": "esbuild --bundle --platform=node --outfile=dist/index.js --target=es2020 --format=cjs --external:semver index.ts",
+        "build:esm": "esbuild --bundle --platform=node --outfile=dist/index.mjs --target=es2020 --format=esm --external:semver index.ts",
+        "build:type": "tsc --project ./tsconfig.json",
+        "check": "tsc --noEmit --project ./tsconfig.json",
+        "lint": "oxlint -c ./node_modules/@haze/oxlint-config/oxlintrc.json .",
+        "fmt": "oxfmt -c .oxfmtrc.json .",
+        "lint:fix": "pnpm lint fix"
+    },
+    "dependencies": {
+        "zod": "^4.1.13",
+        "@haze/instance": "workspace:*",
+        "@haze/resource": "workspace:*",
+        "@haze/file-transfer": "workspace:*",
+        "@haze/core": "workspace:*",
+        "@haze/curseforge": "workspace:*",
+        "@haze/forge-site-parser": "workspace:*",
+        "@haze/game-data": "workspace:*",
+        "@haze/gamesetting": "workspace:*",
+        "@haze/installer": "workspace:*",
+        "@haze/mod-parser": "workspace:*",
+        "@haze/model": "workspace:*",
+        "@haze/modrinth": "workspace:*",
+        "@haze/nbt": "workspace:*",
+        "@haze/resourcepack": "workspace:*",
+        "@haze/system": "workspace:*",
+        "@haze/text-component": "workspace:*",
+        "@haze/unzip": "workspace:*",
+        "@haze/user": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.0",
+        "@haze/oxlint-config": "workspace:*",
+        "oxfmt": "^0.48.0",
+        "oxlint": "^1.63.0",
+        "esbuild": "^0.25.12",
+        "tslib": "^2.5.0",
+        "typescript": "^5.9.3"
+    }
+}

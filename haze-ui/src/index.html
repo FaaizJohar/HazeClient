@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haze Client</title>
+    <link rel="stylesheet" href="./assets/google.font.css">
+    <link rel="stylesheet" href="./assets/preload.css">
+    <script src="http://launcher/flights"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            color: #ffffff;
+        }
+        
+        .unloaded {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        #splash-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0.97);
+            animation: splashEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+        }
+
+        .splash-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 24px;
+            object-fit: contain;
+        }
+
+        .splash-title {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin: 0 0 8px 0;
+        }
+
+        .splash-subtitle {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .splash-loader {
+            margin-top: 48px;
+            width: 140px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .splash-loader::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 30%;
+            background: #ffffff;
+            border-radius: 2px;
+            animation: indeterminateProgress 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes fadeIn {
+            from { background-color: #000000; }
+            to { background-color: #0d0d0d; }
+        }
+
+        @keyframes splashEnter {
+            0% { opacity: 0; transform: scale(0.97) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes indeterminateProgress {
+            0% { transform: translateX(-100%); width: 30%; }
+            50% { width: 60%; }
+            100% { transform: translateX(350%); width: 30%; }
+        }
+    </style>
+</head>
+
+<body class="overflow-hidden unloaded">
+    <div id="splash-container">
+        <img src="./assets/logo.webp" alt="Haze Client Logo" class="splash-logo">
+        <h1 class="splash-title">Haze Client</h1>
+        <p class="splash-subtitle">By Cavrix Core Technologies</p>
+        <div class="splash-loader"></div>
+    </div>
+    <div id="app" style="display: none;"></div>
+    <script>
+        // The Vue app will mount to #app, we hide it initially to prevent FOUC.
+        // The actual main.ts should remove the unloaded class or handle the transition.
+        document.getElementById('app').style.display = 'block';
+    </script>
+    <script type="module" src="./windows/main/index.ts"></script>
+</body>
+
+</html>

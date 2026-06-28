@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "hazeclient",
+  "version": "${version}",
+  "name": "Haze Client Core",
+  "description": "In-game client framework for Haze Client.",
+  "authors": [
+    "Haze Client Team"
+  ],
+  "contact": {
+    "homepage": "https://hazeclient.com",
+    "sources": "https://github.com/hazeclient/core"
+  },
+  "license": "MIT",
+  "icon": "assets/hazeclient/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.hazeclient.HazeClientMod"
+    ]
+  },
+  "mixins": [
+    "hazeclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
