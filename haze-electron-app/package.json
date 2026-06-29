@@ -48,7 +48,7 @@
         "@haze/runtime-api": "workspace:*",
         "@haze/oxlint-config": "workspace:*",
         "@haze/wrtc-multiplayer": "workspace:*",
-        "@haze/windows-utils": "^0.0.15",
+        "@haze/windows-utils": "workspace:*",
         "builtin-modules": "^3.3.0",
         "chalk": "^4.1.2",
         "create-desktop-shortcuts": "^1.10.1",
