@@ -2,7 +2,7 @@
     "name": "haze-launcher",
     "private": true,
     "main": "./index.js",
-    "version": "0.59.1",
+    "version": "0.59.2",
     "author": "Cavrix Core Technologies <support@hazeclient.gg>",
     "description": "Haze Client - A modern Minecraft launcher",
     "license": "MIT",

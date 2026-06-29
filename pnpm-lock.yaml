@@ -98,6 +98,9 @@ importers:
       '@electron/rebuild':
         specifier: ^3.6.0
         version: 3.6.0
+      '@haze/client':
+        specifier: workspace:*
+        version: link:../packages/client
       '@haze/core':
         specifier: workspace:*
         version: link:../packages/core
@@ -257,6 +260,9 @@ importers:
       '@azure/msal-node':
         specifier: ^2.12.0
         version: 2.12.0
+      '@haze/client':
+        specifier: workspace:*
+        version: link:../packages/client
       '@haze/core':
         specifier: workspace:*
         version: link:../packages/core
@@ -474,6 +480,9 @@ importers:
 
   haze-runtime-api:
     dependencies:
+      '@haze/client':
+        specifier: workspace:*
+        version: link:../packages/client
       '@haze/core':
         specifier: workspace:*
         version: link:../packages/core
