@@ -27,6 +27,7 @@
         "zod": "^4.1.13",
         "@haze/instance": "workspace:*",
         "@haze/resource": "workspace:*",
+        "@haze/client": "workspace:*",
         "@haze/file-transfer": "workspace:*",
         "@haze/core": "workspace:*",
         "@haze/curseforge": "workspace:*",

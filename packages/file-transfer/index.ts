@@ -7,3 +7,6 @@ export const onDownloadSingle = () => {};
 export const createMultiplayer = () => ({});
 export const listen = () => {};
 export const Tracker = {};
+
+export const downloadMultiple = {} as any;
+export const DefaultRangePolicy = {} as any;

@@ -7,3 +7,8 @@ export const onDownloadSingle = () => {};
 export const createMultiplayer = () => ({});
 export const listen = () => {};
 export const Tracker = {};
+
+export const readServerInfo = {} as any;
+export const writeServerInfo = {} as any;
+export const ServerInfo = {} as any;
+export const WorldReader = {} as any;

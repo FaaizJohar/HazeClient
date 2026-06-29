@@ -7,3 +7,4 @@ export const onDownloadSingle = () => {};
 export const createMultiplayer = () => ({});
 export const listen = () => {};
 export const Tracker = {};
+export const queryStatus = async () => ({});

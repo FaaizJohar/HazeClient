@@ -8,7 +8,12 @@ import { SecretStorage } from '~/app/SecretStorage'
 import { Logger } from '~/infra'
 import { AnyError } from '@haze/utils'
 
-const CredentialSerializeError = AnyError.make('CredentialSerializeError')
+class CredentialSerializeError extends AnyError {
+  constructor(message?: string) {
+    super(message);
+    this.name = 'CredentialSerializeError';
+  }
+}
 
 export function createPlugin(serviceName: string, accountName: string, logger: Logger, storage: SecretStorage): ICachePlugin {
   accountName = accountName || 'XMCL_MICROSOFT_ACCOUNT'

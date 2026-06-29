@@ -13,9 +13,18 @@ import { AbstractService, ExposeServiceKey } from '~/service'
 import { kUserTokenStorage } from '~/user'
 import { UserService } from './UserService'
 
-const UserAuthenticationError = AnyError.make('UserAuthenticationError')
-const MinecraftFriendsUnsupportedError = AnyError.make('MinecraftFriendsUnsupportedError')
-
+class UserAuthenticationError extends AnyError {
+  constructor(message?: string) {
+    super(message);
+    this.name = 'UserAuthenticationError';
+  }
+}
+class MinecraftFriendsUnsupportedError extends AnyError {
+  constructor(message?: string) {
+    super(message);
+    this.name = 'MinecraftFriendsUnsupportedError';
+  }
+}
 interface CacheEntry {
   data: MinecraftFriendsList
   etag?: string

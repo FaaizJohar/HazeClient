@@ -7,3 +7,7 @@ export const onDownloadSingle = () => {};
 export const createMultiplayer = () => ({});
 export const listen = () => {};
 export const Tracker = {};
+
+export const ModelLoader = {} as any;
+export const ResourceManager = {} as any;
+export const ResourcePack = {} as any;

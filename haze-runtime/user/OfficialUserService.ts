@@ -5,7 +5,12 @@ import { Inject, LauncherApp, LauncherAppKey } from '~/app'
 import { AbstractService, ExposeServiceKey } from '~/service'
 import { kUserTokenStorage } from '~/user'
 
-const UserAuthenticationError = AnyError.make('UserAuthenticationError')
+class UserAuthenticationError extends AnyError {
+  constructor(message?: string) {
+    super(message);
+    this.name = 'UserAuthenticationError';
+  }
+}
 
 @ExposeServiceKey(OfficialUserServiceKey)
 export class OfficialUserService extends AbstractService implements IOfficialUserService {

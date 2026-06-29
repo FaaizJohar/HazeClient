@@ -1,0 +1,745 @@
+﻿pnpm.cmd : [WARN] The "pnpm" field in package.json is no longer read by pnpm. The following keys were ignored: 
+"pnpm.onlyBuiltDependencies", "pnpm.overrides". See https://pnpm.io/settings for the new home of each setting.
+At line:1 char:1
++ pnpm.cmd tsx build.ts > build_errors.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([WARN] The "pnp...f each setting.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Build electron
+  ΓÇó electron-builder  version=24.13.3 os=10.0.26200
+  ΓÇó Specified application directory equals to project dir ΓÇö superfluous or wrong configuration  appDirectory=.
+  ΓÇó @electron/rebuild not required if you use electron-builder, please consider to remove excess dependency from devDependencies
+
+To ensure your native dependencies are always matched electron version, simply add script `"postinstall": "electron-builder install-app-deps" to your `package.json`
+  ΓÇó rebuilt native modules electron=29.3.1 arch=x64
+encodingWorkerEntry_ts
+setupWorkerEntry_ts
+resource_worker_ts
+sqlite_worker_ts
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "isWindowsReservedName"
+
+    ../haze-runtime/util/fs.ts:4:9:
+      4 Γöé import { isWindowsReservedName } from '@haze/instance'
+        Γò╡          ~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "getPlatform"
+
+    ../haze-runtime/app/LauncherApp.ts:1:9:
+      1 Γöé import { getPlatform } from '@haze/core'
+        Γò╡          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "open"
+
+    ../haze-runtime/infra/zip_manager.ts:1:9:
+      1 Γöé import { open, readAllEntries } from '@haze/unzip'
+        Γò╡          ~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readAllEntries"
+
+    ../haze-runtime/infra/zip_manager.ts:1:15:
+      1 Γöé import { open, readAllEntries } from '@haze/unzip'
+        Γò╡                ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "onProgress"
+
+    ../haze-runtime/util/zip.ts:9:18:
+      9 Γöé import { Tracker, onProgress } from '@haze/installer'
+        Γò╡                   ~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "Version"
+
+    ../haze-runtime/launch/VersionService.ts:2:2:
+      2 Γöé   Version,
+        Γò╡   ~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "MinecraftFolder"
+
+    ../haze-runtime/launch/LaunchService.ts:1:9:
+      1 Γöé import { MinecraftFolder, type LaunchOption as ResolvedLaunchOption...
+        Γò╡          ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "createMinecraftProcessWatcher"
+
+    ../haze-runtime/launch/LaunchService.ts:1:140:
+      1 Γöé ...vedServerVersion, createMinecraftProcessWatcher, generateArgumen...
+        Γò╡                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "generateArguments"
+
+    ../haze-runtime/launch/LaunchService.ts:1:171:
+      1 Γöé ...inecraftProcessWatcher, generateArguments, generateArgumentsServ...
+        Γò╡                            ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "generateArgumentsServer"
+
+    ../haze-runtime/launch/LaunchService.ts:1:190:
+      1 Γöé ..., generateArguments, generateArgumentsServer, launch, launchServ...
+        Γò╡                         ~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "launch"
+
+    ../haze-runtime/launch/LaunchService.ts:1:215:
+      1 Γöé ...ts, generateArgumentsServer, launch, launchServer } from '@haze/...
+        Γò╡                                 ~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "launchServer"
+
+    ../haze-runtime/launch/LaunchService.ts:1:223:
+      1 Γöé ..., generateArgumentsServer, launch, launchServer } from '@haze/core'
+        Γò╡                                       ~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "DEFAULT_RUNTIME_ALL_URL"
+
+    ../haze-runtime/java/installDefaultJava.ts:2:9:
+      2 Γöé import { DEFAULT_RUNTIME_ALL_URL, JavaRuntimeTargetType, JavaRuntim...
+        Γò╡          ~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "selectZuluJRE"
+
+    ../haze-runtime/java/zulu.ts:1:54:
+      1 Γöé ...installerInstallZuluJava, selectZuluJRE, type ZuluJRE } from '@h...
+        Γò╡                              ~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installJavaRuntimeWithJson"
+
+    ../haze-runtime/java/JavaService.ts:4:2:
+      4 Γöé   installJavaRuntimeWithJson,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "parseJavaVersion"
+
+    ../haze-runtime/java/JavaService.ts:5:2:
+      5 Γöé   parseJavaVersion,
+        Γò╡   ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "resolveJava"
+
+    ../haze-runtime/java/JavaService.ts:6:2:
+      6 Γöé   resolveJava,
+        Γò╡   ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "scanLocalJava"
+
+    ../haze-runtime/java/JavaService.ts:7:2:
+      7 Γöé   scanLocalJava,
+        Γò╡   ~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "LibraryInfo"
+
+    ../haze-runtime/install/InstallService.ts:1:19:
+      1 Γöé import { checksum, LibraryInfo, MinecraftFolder, ResolvedLibrary, V...
+        Γò╡                    ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "MinecraftFolder"
+
+    ../haze-runtime/install/InstallService.ts:1:32:
+      1 Γöé ...{ checksum, LibraryInfo, MinecraftFolder, ResolvedLibrary, Versi...
+        Γò╡                             ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "Version"
+
+    ../haze-runtime/install/InstallService.ts:1:66:
+      1 Γöé ...Info, MinecraftFolder, ResolvedLibrary, Version } from '@haze/core'
+        Γò╡                                            ~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "completeInstallation"
+
+    ../haze-runtime/install/InstallService.ts:6:2:
+      6 Γöé   completeInstallation,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "DEFAULT_FORGE_MAVEN"
+
+    ../haze-runtime/install/InstallService.ts:7:2:
+      7 Γöé   DEFAULT_FORGE_MAVEN,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "DEFAULT_RESOURCE_ROOT_URL"
+
+    ../haze-runtime/install/InstallService.ts:8:2:
+      8 Γöé   DEFAULT_RESOURCE_ROOT_URL,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installAssets"
+
+    ../haze-runtime/install/InstallService.ts:9:2:
+      9 Γöé   installAssets,
+        Γò╡   ~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installByProfile"
+
+    ../haze-runtime/install/InstallService.ts:10:2:
+      10 Γöé   installByProfile,
+         Γò╡   ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "InstallError"
+
+    ../haze-runtime/install/InstallService.ts:11:2:
+      11 Γöé   InstallError,
+         Γò╡   ~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installFabric"
+
+    ../haze-runtime/install/InstallService.ts:12:2:
+      12 Γöé   installFabric,
+         Γò╡   ~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installForge"
+
+    ../haze-runtime/install/InstallService.ts:13:2:
+      13 Γöé   installForge,
+         Γò╡   ~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installLabyMod4"
+
+    ../haze-runtime/install/InstallService.ts:14:2:
+      14 Γöé   installLabyMod4,
+         Γò╡   ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installLibraries"
+
+    ../haze-runtime/install/InstallService.ts:15:2:
+      15 Γöé   installLibraries,
+         Γò╡   ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installMinecraft"
+
+    ../haze-runtime/install/InstallService.ts:16:2:
+      16 Γöé   installMinecraft,
+         Γò╡   ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installMinecraftJar"
+
+    ../haze-runtime/install/InstallService.ts:17:2:
+      17 Γöé   installMinecraftJar,
+         Γò╡   ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installNeoForge"
+
+    ../haze-runtime/install/InstallService.ts:18:2:
+      18 Γöé   installNeoForge,
+         Γò╡   ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installOptifine"
+
+    ../haze-runtime/install/InstallService.ts:19:2:
+      19 Γöé   installOptifine,
+         Γò╡   ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installQuiltVersion"
+
+    ../haze-runtime/install/InstallService.ts:20:2:
+      20 Γöé   installQuiltVersion,
+         Γò╡   ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installResolvedAssets"
+
+    ../haze-runtime/install/InstallService.ts:21:2:
+      21 Γöé   installResolvedAssets,
+         Γò╡   ~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "installResolvedLibraries"
+
+    ../haze-runtime/install/InstallService.ts:22:2:
+      22 Γöé   installResolvedLibraries,
+         Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "PostProcessFailedError"
+
+    ../haze-runtime/install/InstallService.ts:27:2:
+      27 Γöé   PostProcessFailedError,
+         Γò╡   ~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/forge-site-parser/index.ts" for import "parse"
+
+    ../haze-runtime/install/VersionMetadataService.ts:1:9:
+      1 Γöé import { parse as parseForgeSite } from '@haze/forge-site-parser'
+        Γò╡          ~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "LibraryInfo"
+
+    ../haze-runtime/elyby/ElyByService.ts:1:9:
+      1 Γöé import { LibraryInfo, Version } from '@haze/core'
+        Γò╡          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "Version"
+
+    ../haze-runtime/elyby/ElyByService.ts:1:22:
+      1 Γöé import { LibraryInfo, Version } from '@haze/core'
+        Γò╡                       ~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "open"
+
+    ../haze-runtime/elyby/ElyByService.ts:3:9:
+      3 Γöé import { open, openEntryReadStream, walkEntriesGenerator } from '@h...
+        Γò╡          ~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "openEntryReadStream"
+
+    ../haze-runtime/elyby/ElyByService.ts:3:15:
+      3 Γöé import { open, openEntryReadStream, walkEntriesGenerator } from '@h...
+        Γò╡                ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "walkEntriesGenerator"
+
+    ../haze-runtime/elyby/ElyByService.ts:3:36:
+      3 Γöé ...pen, openEntryReadStream, walkEntriesGenerator } from '@haze/unzip'
+        Γò╡                              ~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "duplicateInstance"
+
+    ../haze-runtime/instance/InstanceService.ts:3:2:
+      3 Γöé   duplicateInstance,
+        Γò╡   ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "InstanceSchema"
+
+    ../haze-runtime/instance/InstanceService.ts:5:2:
+      5 Γöé   InstanceSchema,
+        Γò╡   ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "computeInstanceEditChanges"
+
+    ../haze-runtime/instance/InstanceService.ts:6:2:
+      6 Γöé   computeInstanceEditChanges,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "createInstance"
+
+    ../haze-runtime/instance/InstanceService.ts:7:2:
+      7 Γöé   createInstance,
+        Γò╡   ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/game-data/index.ts" for import "readServerInfo"
+
+    ../haze-runtime/instance/InstanceServerInfoService.ts:2:9:
+      2 Γöé import { readServerInfo, writeServerInfo, ServerInfo } from '@haze/...
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/game-data/index.ts" for import "writeServerInfo"
+
+    ../haze-runtime/instance/InstanceServerInfoService.ts:2:25:
+      2 Γöé import { readServerInfo, writeServerInfo, ServerInfo } from '@haze/...
+        Γò╡                          ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/game-data/index.ts" for import "ServerInfo"
+
+    ../haze-runtime/instance/InstanceServerInfoService.ts:2:42:
+      2 Γöé ...eadServerInfo, writeServerInfo, ServerInfo } from '@haze/game-data'
+        Γò╡                                    ~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/instance/AbstractInstanceDomainService.ts:7:19:
+      7 Γöé import { Resource, ResourceDomain, UpdateResourcePayload } from '@h...
+        Γò╡                    ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/instance/InstanceModsService.ts:1:19:
+      1 Γöé import { Resource, ResourceDomain, ResourceManager } from '@haze/re...
+        Γò╡                    ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/instance/InstanceResourcePacksService.ts:6:9:
+      6 Γöé import { ResourceDomain } from '@haze/resource'
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/instance/InstanceShaderPacksService.ts:6:9:
+      6 Γöé import { ResourceDomain } from '@haze/resource'
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/game-data/index.ts" for import "WorldReader"
+
+    ../haze-runtime/save/save.ts:1:25:
+      1 Γöé import { LevelDataFrame, WorldReader } from '@haze/game-data'
+        Γò╡                          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/nbt/index.ts" for import "deserialize"
+
+    ../haze-runtime/save/save.ts:2:9:
+      2 Γöé import { deserialize, serialize } from '@haze/nbt'
+        Γò╡          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/nbt/index.ts" for import "serialize"
+
+    ../haze-runtime/save/save.ts:2:22:
+      2 Γöé import { deserialize, serialize } from '@haze/nbt'
+        Γò╡                       ~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "open"
+
+    ../haze-runtime/instance/InstanceSavesService.ts:18:9:
+      18 Γöé import { open, openEntryReadStream, readAllEntries } from '@haze/u...
+         Γò╡          ~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "openEntryReadStream"
+
+    ../haze-runtime/instance/InstanceSavesService.ts:18:15:
+      18 Γöé import { open, openEntryReadStream, readAllEntries } from '@haze/u...
+         Γò╡                ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readAllEntries"
+
+    ../haze-runtime/instance/InstanceSavesService.ts:18:36:
+      18 Γöé ...t { open, openEntryReadStream, readAllEntries } from '@haze/unzip'
+         Γò╡                                   ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "LaunchPrecheck"
+
+    ../haze-runtime/launch/pluginLaunchPrecheck.ts:1:9:
+      1 Γöé import { LaunchPrecheck, MinecraftFolder } from '@haze/core'
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "MinecraftFolder"
+
+    ../haze-runtime/launch/pluginLaunchPrecheck.ts:1:25:
+      1 Γöé import { LaunchPrecheck, MinecraftFolder } from '@haze/core'
+        Γò╡                          ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/file-transfer/index.ts" for import "downloadMultiple"
+
+    ../haze-runtime/instanceIO/utils/downloadInstanceFiles.ts:1:54:
+      1 Γöé ...DownloadMultipleOption, downloadMultiple } from '@haze/file-tran...
+        Γò╡                            ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "onDownloadMultiple"
+
+    ../haze-runtime/instanceIO/utils/downloadInstanceFiles.ts:2:18:
+      2 Γöé import { Tracker, onDownloadMultiple } from '@haze/installer'
+        Γò╡                   ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "onProgress"
+
+    ../haze-runtime/instanceIO/utils/linkInstanceFiles.ts:2:18:
+      2 Γöé import { Tracker, onProgress } from '@haze/installer'
+        Γò╡                   ~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "onProgress"
+
+    ../haze-runtime/instanceIO/utils/unzipInstanceFiles.ts:2:18:
+      2 Γöé import { Tracker, onProgress } from '@haze/installer'
+        Γò╡                   ~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "openEntryReadStream"
+
+    ../haze-runtime/instanceIO/utils/unzipInstanceFiles.ts:3:9:
+      3 Γöé import { openEntryReadStream } from '@haze/unzip'
+        Γò╡          ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/utils/index.ts" for import "WorkerQueue"
+
+    ../haze-runtime/instanceIO/utils/unzipInstanceFiles.ts:4:9:
+      4 Γöé import { WorkerQueue, isSystemError } from '@haze/utils'
+        Γò╡          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "InstanceFileOperationHandler"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:3:2:
+      3 Γöé   InstanceFileOperationHandler as InstanceFileOperationHandlerV2,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "InstanceInstallLock"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:4:2:
+      4 Γöé   InstanceInstallLock,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "InstanceLockSchema"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:5:2:
+      5 Γöé   InstanceLockSchema,
+        Γò╡   ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "computeFileUpdates"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:6:2:
+      6 Γöé   computeFileUpdates,
+        Γò╡   ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "getDomainedPath"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:13:2:
+      13 Γöé   getDomainedPath,
+         Γò╡   ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "getFile"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:14:2:
+      14 Γöé   getFile,
+         Γò╡   ~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "isValidModrinthId"
+
+    ../haze-runtime/instanceIO/InstanceInstallService.ts:15:2:
+      15 Γöé   isValidModrinthId,
+         Γò╡   ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "ServerFSExporter"
+
+    ../haze-runtime/instanceIO/InstanceIOService.ts:2:2:
+      2 Γöé   ServerFSExporter,
+        Γò╡   ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "ServerSSHExporter"
+
+    ../haze-runtime/instanceIO/InstanceIOService.ts:3:2:
+      3 Γöé   ServerSSHExporter,
+        Γò╡   ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "parseInstanceFiles"
+
+    ../haze-runtime/instanceIO/InstanceIOService.ts:4:2:
+      4 Γöé   parseInstanceFiles,
+        Γò╡   ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "parseLauncherData"
+
+    ../haze-runtime/instanceIO/InstanceIOService.ts:5:2:
+      5 Γöé   parseLauncherData,
+        Γò╡   ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "generateInstanceManifest"
+
+    ../haze-runtime/instanceIO/InstanceManifestService.ts:2:9:
+      2 Γöé import { generateInstanceManifest, getInstanceFiles, type InstanceF...
+        Γò╡          ~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getInstanceFiles"
+
+    ../haze-runtime/instanceIO/InstanceManifestService.ts:2:35:
+      2 Γöé ...nerateInstanceManifest, getInstanceFiles, type InstanceFile } fr...
+        Γò╡                            ~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/installer/index.ts" for import "diagnoseFile"
+
+    ../haze-runtime/market/pluginMarketProvider.ts:9:9:
+      9 Γöé import { diagnoseFile, onDownloadSingle, Tracker } from '@haze/inst...
+        Γò╡          ~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "isValidCurseforgeRef"
+
+    ../haze-runtime/market/pluginMarketProvider.ts:12:15:
+      12 Γöé import { File, isValidCurseforgeRef, isValidModrinthRef } from '@h...
+         Γò╡                ~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "isValidModrinthRef"
+
+    ../haze-runtime/market/pluginMarketProvider.ts:12:37:
+      12 Γöé ..., isValidCurseforgeRef, isValidModrinthRef } from '@haze/resource'
+         Γò╡                            ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "Version"
+
+    ../haze-runtime/nativeReplacer/pluginNativeReplacer.ts:1:43:
+      1 Γöé import { ResolvedLibrary, ResolvedVersion, Version } from '@haze/core'
+        Γò╡                                            ~~~~~~~
+
+X [ERROR] No matching export in "../packages/file-transfer/index.ts" for import "DefaultRangePolicy"
+
+    ../haze-runtime/network/pluginNetworkInterface.ts:1:9:
+      1 Γöé import { DefaultRangePolicy } from '@haze/file-transfer'
+        Γò╡          ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceManager"
+
+    ../haze-runtime/resource/pluginResourceWorker.ts:4:2:
+      4 Γöé   ResourceManager,
+        Γò╡   ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "getDomainedPath"
+
+    ../haze-runtime/resource/pluginResourceWorker.ts:5:2:
+      5 Γöé   getDomainedPath,
+        Γò╡   ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "migrate"
+
+    ../haze-runtime/resource/pluginResourceWorker.ts:6:2:
+      6 Γöé   migrate,
+        Γò╡   ~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "sweepCorruptedRefs"
+
+    ../haze-runtime/resource/pluginResourceWorker.ts:7:2:
+      7 Γöé   sweepCorruptedRefs,
+        Γò╡   ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/resourcePack/pluginResourcePackLink.ts:7:9:
+      7 Γöé import { ResourceDomain } from '@haze/resource'
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/utils/index.ts" for import "AggregateExecutor"
+
+    ../haze-runtime/settings/pluginSettings.ts:2:9:
+      2 Γöé import { AggregateExecutor } from '@haze/utils'
+        Γò╡          ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "LibraryInfo"
+
+    ../haze-runtime/authlibInjector/AuthlibInjectorService.ts:1:9:
+      1 Γöé import { LibraryInfo, MinecraftFolder } from '@haze/core'
+        Γò╡          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/core/index.ts" for import "MinecraftFolder"
+
+    ../haze-runtime/authlibInjector/AuthlibInjectorService.ts:1:22:
+      1 Γöé import { LibraryInfo, MinecraftFolder } from '@haze/core'
+        Γò╡                       ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "isValidModrinthId"
+
+    ../haze-runtime/moddb/ModMetadataService.ts:4:9:
+      4 Γöé import { isValidModrinthId, ResourceDomain, ResourceManager, type R...
+        Γò╡          ~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getInstanceConfigFromCurseforgeModpack"
+
+    ../haze-runtime/modpack/utils/curseforgeHandler.ts:2:50:
+      2 Γöé ...nstanceFile, getInstanceConfigFromCurseforgeModpack } from '@haz...
+        Γò╡                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/modpack/utils/curseforgeHandler.ts:3:9:
+      3 Γöé import { ResourceDomain } from '@haze/resource'
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readEntry"
+
+    ../haze-runtime/modpack/utils/curseforgeHandler.ts:4:9:
+      4 Γöé import { readEntry } from '@haze/unzip'
+        Γò╡          ~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getInstanceConfigFromMcbbsModpack"
+
+    ../haze-runtime/modpack/utils/mcbbsHandler.ts:2:72:
+      2 Γöé ...InfoCurseforge, getInstanceConfigFromMcbbsModpack } from '@haze/...
+        Γò╡                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "ResourceDomain"
+
+    ../haze-runtime/modpack/utils/mcbbsHandler.ts:3:9:
+      3 Γöé import { ResourceDomain } from '@haze/resource'
+        Γò╡          ~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readEntry"
+
+    ../haze-runtime/modpack/utils/mcbbsHandler.ts:4:9:
+      4 Γöé import { readEntry } from '@haze/unzip'
+        Γò╡          ~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getInstanceConfigFromMmcModpack"
+
+    ../haze-runtime/modpack/utils/mmcHandler.ts:1:62:
+      1 Γöé ...ModpackManifest, getInstanceConfigFromMmcModpack } from '@haze/i...
+        Γò╡                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readEntry"
+
+    ../haze-runtime/modpack/utils/mmcHandler.ts:2:9:
+      2 Γöé import { readEntry } from '@haze/unzip'
+        Γò╡          ~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getInstanceConfigFromModrinthModpack"
+
+    ../haze-runtime/modpack/utils/modrinthHandler.ts:1:48:
+      1 Γöé ...packManifest, getInstanceConfigFromModrinthModpack } from '@haze...
+        Γò╡                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readEntry"
+
+    ../haze-runtime/modpack/utils/modrinthHandler.ts:3:9:
+      3 Γöé import { readEntry } from '@haze/unzip'
+        Γò╡          ~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "InstanceLockSchema"
+
+    ../haze-runtime/modpack/ModpackService.ts:3:2:
+      3 Γöé   InstanceLockSchema,
+        Γò╡   ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getCurseforgeModpackFromInstance"
+
+    ../haze-runtime/modpack/ModpackService.ts:5:2:
+      5 Γöé   getCurseforgeModpackFromInstance,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/instance/index.ts" for import "getModrinthModpackFromInstance"
+
+    ../haze-runtime/modpack/ModpackService.ts:6:2:
+      6 Γöé   getModrinthModpackFromInstance,
+        Γò╡   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "isValidCurseforgeRef"
+
+    ../haze-runtime/modpack/ModpackService.ts:15:9:
+      15 Γöé import { isValidCurseforgeRef, isValidModrinthRef, ResourceManager...
+         Γò╡          ~~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resource/index.ts" for import "isValidModrinthRef"
+
+    ../haze-runtime/modpack/ModpackService.ts:15:31:
+      15 Γöé ... isValidCurseforgeRef, isValidModrinthRef, ResourceManager, Res...
+         Γò╡                           ~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readEntry"
+
+    ../haze-runtime/modpack/ModpackService.ts:30:9:
+      30 Γöé import { readEntry } from '@haze/unzip'
+         Γò╡          ~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resourcepack/index.ts" for import "ModelLoader"
+
+    ../haze-runtime/resourcePack/ResourcePackPreviewService.ts:1:9:
+      1 Γöé import { ModelLoader, ResourceManager, ResourcePack, ResourcePackWr...
+        Γò╡          ~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resourcepack/index.ts" for import "ResourceManager"
+
+    ../haze-runtime/resourcePack/ResourcePackPreviewService.ts:1:22:
+      1 Γöé import { ModelLoader, ResourceManager, ResourcePack, ResourcePackWr...
+        Γò╡                       ~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/resourcepack/index.ts" for import "ResourcePack"
+
+    ../haze-runtime/resourcePack/ResourcePackPreviewService.ts:1:39:
+      1 Γöé ...lLoader, ResourceManager, ResourcePack, ResourcePackWrapper } fr...
+        Γò╡                              ~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "open"
+
+    ../haze-runtime/theme/ThemeService.ts:2:9:
+      2 Γöé import { open, openEntryReadStream, readAllEntries } from '@haze/un...
+        Γò╡          ~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "openEntryReadStream"
+
+    ../haze-runtime/theme/ThemeService.ts:2:15:
+      2 Γöé import { open, openEntryReadStream, readAllEntries } from '@haze/un...
+        Γò╡                ~~~~~~~~~~~~~~~~~~~
+
+X [ERROR] No matching export in "../packages/unzip/index.ts" for import "readAllEntries"
+
+    ../haze-runtime/theme/ThemeService.ts:2:36:
+      2 Γöé ...rt { open, openEntryReadStream, readAllEntries } from '@haze/unzip'
+        Γò╡                                    ~~~~~~~~~~~~~~
+
+Error: Build failed with 119 errors:
+../haze-runtime/app/LauncherApp.ts:1:9: ERROR: No matching export in "../packages/core/index.ts" for import 
+"getPlatform"
+../haze-runtime/authlibInjector/AuthlibInjectorService.ts:1:9: ERROR: No matching export in 
+"../packages/core/index.ts" for import "LibraryInfo"
+../haze-runtime/authlibInjector/AuthlibInjectorService.ts:1:22: ERROR: No matching export in 
+"../packages/core/index.ts" for import "MinecraftFolder"
+../haze-runtime/elyby/ElyByService.ts:1:9: ERROR: No matching export in "../packages/core/index.ts" for import 
+"LibraryInfo"
+../haze-runtime/elyby/ElyByService.ts:1:22: ERROR: No matching export in "../packages/core/index.ts" for import 
+"Version"
+...
